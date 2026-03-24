@@ -1,0 +1,43 @@
+<h1>Dashboard</h1>
+
+<div class="cards" *ngIf="indicadores">
+  <mat-card>
+    <h3>Alunos Ativos</h3>
+    <strong>{{ indicadores.totalAlunosAtivos }}</strong>
+  </mat-card>
+
+  <mat-card>
+    <h3>Alunos Inativos</h3>
+    <strong>{{ indicadores.totalAlunosInativos }}</strong>
+  </mat-card>
+
+  <mat-card>
+    <h3>Turmas Ativas</h3>
+    <strong>{{ indicadores.totalTurmasAtivas }}</strong>
+  </mat-card>
+
+  <mat-card>
+    <h3>Frequências Hoje</h3>
+    <strong>{{ indicadores.frequenciasHoje }}</strong>
+  </mat-card>
+
+  <mat-card>
+    <h3>Pagamentos Pendentes</h3>
+    <strong>{{ indicadores.pagamentosPendentes }}</strong>
+  </mat-card>
+
+  <mat-card>
+    <h3>Pagamentos Atrasados</h3>
+    <strong>{{ indicadores.pagamentosAtrasados }}</strong>
+  </mat-card>
+
+  <mat-card>
+    <h3>Pagamentos Pagos</h3>
+    <strong>{{ indicadores.pagamentosPagos }}</strong>
+  </mat-card>
+
+  <mat-card>
+    <h3>Recebido no Mês</h3>
+    <strong>{{ indicadores.valorRecebidoNoMes | currency:'BRL' }}</strong>
+  </mat-card>
+</div>

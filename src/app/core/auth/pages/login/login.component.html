@@ -1,0 +1,24 @@
+<div class="login-page">
+  <mat-card class="login-card">
+    <h1>Build Academy</h1>
+    <p>Acesse o sistema</p>
+
+    <form [formGroup]="form" (ngSubmit)="entrar()">
+      <mat-form-field appearance="outline">
+        <mat-label>Login</mat-label>
+        <input matInput formControlName="login" />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Senha</mat-label>
+        <input matInput type="password" formControlName="senha" />
+      </mat-form-field>
+
+      <button mat-raised-button type="submit">
+        Entrar
+      </button>
+
+      <small *ngIf="erro">{{ erro }}</small>
+    </form>
+  </mat-card>
+</div>
