@@ -1,0 +1,25 @@
+<div class="page-header">
+  <h1>Alunos</h1>
+  <button mat-raised-button (click)="novoAluno()">Novo Aluno</button>
+</div>
+
+<div class="filtros">
+  <mat-form-field appearance="outline">
+    <mat-label>Buscar por nome</mat-label>
+    <input matInput [(ngModel)]="nomeBusca" />
+  </mat-form-field>
+
+  <button mat-raised-button (click)="buscar()">Buscar</button>
+</div>
+
+<div class="grid">
+  <mat-card *ngFor="let aluno of alunos" class="card-aluno">
+    <h3>{{ aluno.nome }}</h3>
+    <p><strong>Matrícula:</strong> {{ aluno.matricula }}</p>
+    <p><strong>Status:</strong> {{ aluno.status }}</p>
+    <p><strong>Unidade:</strong> {{ aluno.unidadeNome }}</p>
+    <p><strong>Turma:</strong> {{ aluno.turmaNome || '-' }}</p>
+
+    <button mat-stroked-button (click)="editar(aluno.id)">Editar</button>
+  </mat-card>
+</div>

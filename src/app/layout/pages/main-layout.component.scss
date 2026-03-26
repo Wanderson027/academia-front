@@ -1,0 +1,57 @@
+.layout {
+  display: flex;
+  min-height: 100vh;
+  background: #f7f7f7;
+}
+
+.sidebar {
+  width: 240px;
+  background: #111111;
+  color: #ffffff;
+  padding: 24px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: 700;
+  color: #f4c400;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.menu a {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 10px 12px;
+  border-radius: 8px;
+  transition: 0.2s ease;
+}
+
+.menu a:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.menu a.active {
+  background: #f4c400;
+  color: #111111;
+  font-weight: 600;
+}
+
+button {
+  margin-top: auto;
+  background: #f4c400 !important;
+  color: #111111 !important;
+  border-radius: 999px;
+}
+
+.content {
+  flex: 1;
+  padding: 24px;
+}

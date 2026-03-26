@@ -48,8 +48,9 @@ export class LoginComponent {
       next: () => {
         this.router.navigate(['/dashboard']);
       },
-      error: () => {
-        this.erro = 'Login ou senha inválidos.';
+      error: (err) => {
+        console.error('Erro no login:', err);
+        this.erro = `Erro ao autenticar: ${err.status ?? 'sem status'}`;
         this.carregando = false;
       },
       complete: () => {

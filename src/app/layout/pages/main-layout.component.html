@@ -1,0 +1,20 @@
+<div class="layout">
+  <aside class="sidebar">
+    <div class="logo">Build Academy</div>
+
+    <nav class="menu">
+      <a routerLink="/dashboard" routerLinkActive="active">Dashboard</a>
+      <a routerLink="/alunos" routerLinkActive="active">Alunos</a>
+      <a routerLink="/turmas" routerLinkActive="active">Turmas</a>
+      <a routerLink="/frequencia" routerLinkActive="active">Frequência</a>
+      <a routerLink="/pagamentos" routerLinkActive="active">Pagamentos</a>
+      <a routerLink="/unidades" routerLinkActive="active">Unidades</a>
+    </nav>
+
+    <button mat-raised-button type="button" (click)="sair()">Sair</button>
+  </aside>
+
+  <main class="content">
+    <router-outlet></router-outlet>
+  </main>
+</div>

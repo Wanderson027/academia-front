@@ -1,0 +1,28 @@
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.filtros {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+.card-aluno {
+  border-left: 5px solid #f4c400;
+}
+
+button[mat-raised-button] {
+  background: #f4c400 !important;
+  color: #111111 !important;
+}

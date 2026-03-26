@@ -1,0 +1,11 @@
+.form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+}
+
+button {
+  width: 180px;
+  background: #f4c400 !important;
+  color: #111111 !important;
+}

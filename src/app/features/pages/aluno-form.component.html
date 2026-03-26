@@ -1,0 +1,71 @@
+<h1>{{ editando ? 'Editar Aluno' : 'Novo Aluno' }}</h1>
+
+<form [formGroup]="form" class="form">
+  <mat-form-field appearance="outline">
+    <mat-label>Matrícula</mat-label>
+    <input matInput formControlName="matricula" />
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Nome</mat-label>
+    <input matInput formControlName="nome" />
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>CPF</mat-label>
+    <input matInput formControlName="cpf" />
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Telefone</mat-label>
+    <input matInput formControlName="telefone" />
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Data de Nascimento</mat-label>
+    <input matInput type="date" formControlName="dataNascimento" />
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Sexo</mat-label>
+    <input matInput formControlName="sexo" />
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Endereço</mat-label>
+    <input matInput formControlName="endereco" />
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Status</mat-label>
+    <mat-select formControlName="status">
+      <mat-option value="ATIVO">ATIVO</mat-option>
+      <mat-option value="INATIVO">INATIVO</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Data de Cadastro</mat-label>
+    <input matInput type="date" formControlName="dataCadastro" />
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Unidade</mat-label>
+    <mat-select formControlName="unidadeId">
+      <mat-option *ngFor="let unidade of unidades" [value]="unidade.id">
+        {{ unidade.nome }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Turma</mat-label>
+    <mat-select formControlName="turmaId">
+      <mat-option *ngFor="let turma of turmas" [value]="turma.id">
+        {{ turma.nome }} - {{ turma.horario }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <button mat-raised-button type="button" (click)="salvar()">Salvar</button>
+</form>
